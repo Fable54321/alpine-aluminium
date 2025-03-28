@@ -1,0 +1,21 @@
+@use './abstracts/reset';
+@use './abstracts/variables' as *;
+
+
+
+html {
+
+    @media(min-width: $breakpoint-40){
+        font-size: 1.25em;
+    }
+    @media(min-width: $breakpoint){
+        font-size: 1.5em;
+    }
+    
+}
+
+
+body {
+    background-color: $clr-neutral-600;
+   
+}

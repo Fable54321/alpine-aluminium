@@ -1,0 +1,201 @@
+@use '../../Styles/abstracts/variables' as *;
+
+
+
+.home {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+ 
+    &__banner {
+        position: relative;
+        width: 100%;
+        z-index: -1;
+        
+
+        &__img {
+            position: absolute;
+            width: 100%;
+            
+           
+        }
+
+        &__title {
+            position: absolute;
+            font-family: $ff-primary;
+            font-weight: $fw-bold;
+            font-size: $fs-250;
+            line-height: $sz-225;
+            text-align: center;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+            span {
+                font-weight: $fw-light;
+            }
+
+            @media(min-width: $breakpoint){
+                top: 130px;
+            }
+        }
+
+        &__subtitle {
+            position: absolute;
+            width: 100%;
+            font-family: $ff-primary;
+            font-weight: $fw-bold;
+            font-size: $fs-150;
+            line-height: $sz-150;
+            text-align: center;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+            @media(min-width: $breakpoint){
+                top: 180px;
+            }
+        }
+
+        &__border--mobile {
+            width: 100%;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            background: linear-gradient(90deg, rgba(1, 114, 156, 0.8) 11%, rgba(1, 114, 156, 1) 51%, rgba(1, 114, 156, 0.8) 89%);
+            display: flex;
+            justify-content: center;
+            font-size: $fs-250;
+            padding-block: $sz-075;
+            color: white;
+
+            @media(min-width: $breakpoint){
+               display: none;
+               
+            }
+        }
+
+        &__border {
+            display: none;
+
+            @media(min-width: $breakpoint){
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                font-size: $fs-250;
+                padding-block: $sz-075;
+                color: white;
+                background: linear-gradient(90deg, rgba(1, 114, 156, 0.25) 11%, rgba(1, 114, 156, 1) 51%, rgba(1, 114, 156, 0.25) 89%);
+                border-top: 2px solid white;
+                border-bottom: 2px solid white;
+            }
+        }
+
+    
+        }
+
+        &__aluminium {
+            position: relative;
+            
+            background-color: $clr-neutral-200;
+            width: 96%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: $sz-175;
+
+            @media(min-width: $breakpoint){
+                padding-top: $sz-250;
+            }
+            
+
+            &__title {
+                font-family: $ff-primary;
+                font-weight: $fw-bold;
+                font-size: $fs-200;
+                text-align: center;
+            }
+
+           
+
+            &__text {
+                margin-top: $sz-100;
+                font-family: $ff-secondary;
+                width: 85%;
+                text-align: center;
+                position: relative;
+               
+            }
+
+           
+
+
+            &--wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: $sz-100;
+                width: 100vw;
+                font-family: $ff-secondary;
+                font-weight: $fw-bold;
+                position: relative;
+               
+                
+
+                @media(min-width: $breakpoint){
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 99vw;
+                    
+                     
+                    }
+                    
+                
+            }
+
+            &__part {
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media(min-width: $breakpoint){
+                    width: 49%;
+
+                   
+                }
+                
+
+                &__text {
+                    padding-block: $sz-100;
+                }
+
+                &__img {
+                    width: 100%;
+                    object-fit: contain;
+                    position: relative;
+
+                    @media(min-width: $breakpoint){
+                        width: 98.5%;
+                        
+                    }
+
+                  
+                }
+                
+            }
+
+         
+
+           
+           
+        }
+
+       
+
+}

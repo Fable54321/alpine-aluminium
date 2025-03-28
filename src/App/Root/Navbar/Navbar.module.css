@@ -1,0 +1,197 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+  color: black;
+}
+.navbar__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid #6D6C70;
+}
+.navbar__top__logo {
+  width: min(40%, 200px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.navbar__top__dropdown {
+  display: block;
+  width: min(10%, 45px);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-tap-highlight-color: transparent;
+}
+.navbar__top__dropdown:active {
+  width: min(9%, 42px);
+  position: relative;
+  transform: translateX(-5%);
+}
+@media (min-width: 65em) {
+  .navbar__top__dropdown {
+    display: none;
+  }
+}
+@keyframes rotateOut {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.navbar__nav-desktop {
+  display: none;
+}
+@media (min-width: 65em) {
+  .navbar__nav-desktop {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    align-self: flex-end;
+  }
+  .navbar__nav-desktop__list {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.75rem;
+    list-style: none;
+    font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  }
+  .navbar__nav-desktop__list li {
+    padding: 0.25rem;
+    border-bottom: 2px solid #01729C;
+  }
+  .navbar__nav-desktop__list li:hover {
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 25%, rgba(109, 108, 112, 0.25) 65%, #6d6c70 100%);
+  }
+  .navbar__nav-desktop__list__link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.navbar__nav-menu {
+  position: absolute;
+  right: 0%;
+  top: 0.5%;
+  padding-left: 2%;
+  padding-block: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #F9F9F9;
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-size: 1.5rem;
+  width: 90%;
+  height: 75vh;
+  border-left: 2px solid black;
+  border-bottom: 3px solid black;
+  border-bottom-left-radius: 1rem;
+  transform: translateX(0);
+  transition: all 750ms ease-in-out;
+}
+@media (min-width: 65em) {
+  .navbar__nav-menu {
+    display: none;
+  }
+}
+.navbar__nav-menu__close {
+  width: min(12%, 45px);
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  z-index: 1000;
+  animation: rotateOut 0.5s ease-in-out forwards;
+}
+@media (min-width: 65em) {
+  .navbar__nav-menu__close {
+    display: none;
+  }
+}
+@keyframes rotateIn {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.navbar__nav-menu__list {
+  width: 100%;
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.navbar__nav-menu__list li {
+  width: 70%;
+  border-bottom: 4px solid #01729C;
+  border-right: 1px solid #01729C;
+  border-bottom-right-radius: 2.5rem;
+  padding-bottom: 1em;
+}
+.navbar__nav-menu__list__link {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar__nav-menu--off {
+  position: absolute;
+  right: 0%;
+  top: 0.5%;
+  padding-block: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: rgba(249, 249, 249, 0.95);
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-size: 1.4em;
+  width: 90%;
+  height: 75vh;
+  border: 2px solid #01729C;
+  border-bottom-left-radius: 1rem;
+  transform: translateX(100%);
+  transition: all 1s ease-in-out 100ms;
+}
+@media (min-width: 65em) {
+  .navbar__nav-menu--off {
+    display: none;
+  }
+}
+.navbar__bottom {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding-block: 0.5rem;
+  position: relative;
+  z-index: -1;
+}
+.navbar__bottom__number {
+  display: none;
+}
+@media (min-width: 65em) {
+  .navbar__bottom__number {
+    display: block;
+    position: absolute;
+    left: 0.5%;
+    bottom: 0.5%;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+.navbar__border {
+  width: 100%;
+  height: 0.35rem;
+  background: rgb(1, 114, 156);
+  background: linear-gradient(90deg, rgba(1, 114, 156, 0.4234068627) 11%, rgb(1, 114, 156) 51%, rgba(1, 114, 156, 0.42) 89%);
+}/*# sourceMappingURL=Navbar.module.css.map */
