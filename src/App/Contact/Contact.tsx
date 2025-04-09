@@ -15,6 +15,7 @@ const Contact = () => {
   const [numberError, setNumberError] = useState(false);
   const [messageError, setMessageError] = useState(false);
   const [success, setSuccess] = useState<boolean>(false);
+  const [hasTried, setHasTried] = useState(false);
 
   const handleOnChange = (event: React.FormEvent<HTMLInputElement>) => {
   const target = event.target as HTMLInputElement;
@@ -65,6 +66,9 @@ const Contact = () => {
   }
 
   useEffect(()=> {
+
+    if(!hasTried) {return}
+
     if (!nom || !regexName.test(nom))  {
       setNameError(true);
     } else {
@@ -88,15 +92,17 @@ const Contact = () => {
     } else {
       setMessageError(false);
     }
-  },[nom, Numero, courriel, message])
+  },[nom, Numero, courriel, message, hasTried])
 
   const regexPhoneNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-  const regexName = /^[a-zA-Z\s]+$/;
+  const regexName = /^[a-zA-ZÀ-ÿ\s]+$/;
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const min20charRegex = /^.{20,}$/;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
+
+  setHasTried(!hasTried);
 
   if (!Numero || !regexPhoneNumber.test(Numero)) {
     setNumberError(true);
@@ -149,6 +155,7 @@ const Contact = () => {
     setEmailError(false);
     setMessageError(false);
     setSuccess(true);
+    
   }
 };
 
