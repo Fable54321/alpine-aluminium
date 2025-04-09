@@ -1,7 +1,10 @@
 import styles from './Home.module.css'
 import banner from '../../assets/images/banner.jpg'
+import moderne from '../../assets/images/cap--moderne.png'
+import rustique from '../../assets/images/cap--rustique.png'
+import euro from '../../assets/images/cap--euro.png'
 import aluminium from '../../assets/images/aluminium.jpg'
-import jean from '../../assets/images/DSC09613-7.jpg'
+import jean from '../../assets/images/jean kry.jpg'
 import { useMediaQuery } from 'react-responsive'
 import banner_mobile from '../../assets/images/banner-mobile.jpg'
 
@@ -17,7 +20,18 @@ const Home = () => {
         <h2 className={styles['home__banner__subtitle']}>Référence en chapeaux de cheminée</h2>
         <div className={styles['home__banner__border']}><h2>450-668-6657</h2></div>
       </div>
-        <div className={styles['home__banner__border--mobile']}><h2>450-668-6657</h2></div> 
+        <div className={styles['home__banner__border--mobile']}><h2>450-668-6657</h2></div>
+      <article className={styles['home__infiltrations']}>
+        <h2 className={styles['home__infiltrations__title']}>Dites adieu aux infiltrations d'eau</h2>
+        <p className={styles['home__infiltrations__text']}>Nos produits de haute qualité sont entièrement conçus par notre équipe. Ils sont sans silicone et donc 100% soudés, prêts pour le climat d'ici. Avec alpine aluminium, les infiltrations d'eau sont choses du passé.</p>
+        
+       <div className={styles['home__infiltrations__img--wrapper']}>
+        <img className={styles['home__infiltrations__img']} src={moderne} alt="le chapeau de cheminée moderne est ici présenté" />
+        <img style={{display: isMobile ? 'none': 'block'}} className={styles['home__infiltrations__img']} src={rustique} alt="le chapeau de cheminée rustique est ici présenté" />
+        <img style={{display: isMobile ? 'none': 'block'}} className={styles['home__infiltrations__img']} src={euro} alt="le chapeau de cheminée euro est ici présenté" />
+      </div>  
+
+      </article>   
       <article className={styles['home__aluminium']}>
         <h2 className={styles['home__aluminium__title'] }>Les Experts de l'aluminium</h2>
         <p className={styles['home__aluminium__text']}>Spécialistes en chapeaux de cheminée, nous possédons tout l'équipement nécessaire pour travailler l'aluminium sous toutes ses moutures. Si c'est en aluminium, on s'en occupe. </p>

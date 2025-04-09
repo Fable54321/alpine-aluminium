@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: black;
+  padding-bottom: 0.75rem;
 }
 .home__banner {
   position: relative;
@@ -85,14 +86,67 @@
     border-bottom: 2px solid white;
   }
 }
-.home__aluminium {
+.home__infiltrations {
   position: relative;
+  margin-top: 1rem;
   background-color: #F9F9F9;
   width: 96%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 1.75rem;
+  padding-bottom: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75), 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+@media (min-width: 65em) {
+  .home__infiltrations {
+    padding-bottom: 1.5rem;
+  }
+}
+.home__infiltrations__title {
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+.home__infiltrations__text {
+  margin-top: 1rem;
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  width: 85%;
+  text-align: center;
+  position: relative;
+}
+.home__infiltrations__img--wrapper {
+  width: 100vw;
+}
+@media (min-width: 65em) {
+  .home__infiltrations__img--wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.home__infiltrations__img {
+  margin-top: 0.75rem;
+  width: 110%;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75), 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+@media (min-width: 65em) {
+  .home__infiltrations__img {
+    margin-top: 1.5rem;
+    width: 30%;
+    box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.75), -5px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+.home__aluminium {
+  position: relative;
+  margin-top: 1rem;
+  background-color: #F9F9F9;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.75rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75), 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 65em) {
   .home__aluminium {
@@ -147,6 +201,7 @@
   -o-object-fit: contain;
      object-fit: contain;
   position: relative;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75), 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 65em) {
   .home__aluminium__part__img {

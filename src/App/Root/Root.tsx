@@ -11,6 +11,7 @@ const Root = () => {
     </header>
     <main>
       <Outlet/>
+      
     </main>
     </>
   )

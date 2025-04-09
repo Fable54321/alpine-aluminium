@@ -12,7 +12,7 @@
   align-items: center;
   padding-left: 2rem;
   padding-right: 1rem;
-  border-bottom: 1px solid #6D6C70;
+  border-bottom: 1px solid hsl(255, 2%, 43%);
 }
 .navbar__top__logo {
   width: min(40%, 200px);
@@ -68,7 +68,7 @@
   .navbar__nav-desktop__list li:hover {
     cursor: pointer;
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 25%, rgba(109, 108, 112, 0.25) 65%, #6d6c70 100%);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 25%, rgba(109, 107, 112, 0.25) 65%, #6d6b70 100%);
   }
   .navbar__nav-desktop__list__link {
     color: inherit;

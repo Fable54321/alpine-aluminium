@@ -1,0 +1,229 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.contact__border--1 {
+  width: 97%;
+  height: 10px;
+  top: -5px;
+  background: rgb(1, 114, 156);
+  background: linear-gradient(90deg, rgb(1, 114, 156) 9%, rgb(230, 230, 255) 48%, rgb(230, 230, 255) 52%, rgb(1, 114, 156) 97%);
+  position: absolute;
+  border-radius: 0.25rem;
+  z-index: -1;
+}
+@media (min-width: 65em) {
+  .contact__border--1 {
+    top: -12px;
+    height: 15px;
+  }
+}
+.contact__form--wrapper {
+  margin-top: 1.5rem;
+  width: min(93%, 650px);
+  border-radius: 0.25rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: black;
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 3.5rem;
+  position: relative;
+  box-shadow: 3px 50% 2px black;
+}
+@media (min-width: 65em) {
+  .contact__form--wrapper {
+    margin-top: 2rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
+}
+.contact__form--wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -3;
+  top: -5px;
+  border-radius: 0.25rem;
+  width: 104%;
+  height: 101%;
+  background: rgb(1, 114, 156);
+  background: linear-gradient(0deg, rgb(1, 114, 156) 9%, rgb(230, 230, 255) 48%, rgb(230, 230, 255) 52%, rgb(1, 114, 156) 97%);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.75), -5px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+@media (min-width: 65em) {
+  .contact__form--wrapper::before {
+    top: -12px;
+    height: 103%;
+  }
+}
+.contact__title {
+  margin-top: 2rem;
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-size: 1.75rem;
+  text-align: center;
+}
+@media (min-width: 65em) {
+  .contact__title {
+    font-size: 1.25rem;
+  }
+}
+.contact__text {
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  width: 90%;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+@media (min-width: 65em) {
+  .contact__text {
+    font-size: 0.75rem;
+  }
+}
+.contact__form {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+}
+.contact__form__input--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 65em) {
+  .contact__form {
+    gap: 0.5rem;
+  }
+}
+.contact__form__label {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  background: rgb(1, 114, 156);
+  background: linear-gradient(90deg, rgba(1, 114, 156, 0) 2%, rgba(1, 114, 156, 0.7) 3%, rgb(230, 230, 255) 28%, rgb(230, 230, 255) 72%, rgba(1, 114, 156, 0.7) 97%, rgba(1, 114, 156, 0) 100%);
+  padding-inline: 2.5rem;
+  padding-block: 2px;
+  text-align: center;
+}
+@media (min-width: 65em) {
+  .contact__form__label {
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+  }
+}
+.contact__form__input {
+  border-radius: 0.5rem;
+  background-color: hsl(255, 2%, 83%);
+  width: 80%;
+  padding-block: 0.25rem;
+  border: 1px solid hsl(255, 2%, 43%);
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+}
+@media (min-width: 65em) {
+  .contact__form__input {
+    width: 60%;
+  }
+}
+.contact__form__input:focus, .contact__form__input:active, .contact__form__input:focus-visible {
+  outline: 2px solid black;
+  border: none;
+  background-color: hsl(255, 2%, 83%) !important;
+  color: black;
+}
+.contact__form__message {
+  border-radius: 0.5rem;
+  background-color: hsl(255, 2%, 83%);
+  width: 75%;
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  padding-inline: 2px;
+}
+.contact__form__message:focus {
+  outline: 2px solid black;
+  background-color: hsl(255, 2%, 83%);
+  color: black;
+}
+@media (min-width: 65em) {
+  .contact__form__message {
+    width: 65%;
+    height: 7rem;
+  }
+}
+.contact__form__file--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.75rem;
+}
+.contact__form__label--file {
+  border: 2px solid black;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #01729C;
+  color: white;
+  box-shadow: 0px 2px 2px black;
+}
+@media (min-width: 65em) {
+  .contact__form__label--file {
+    font-size: 0.75rem;
+  }
+  .contact__form__label--file:hover {
+    cursor: pointer;
+  }
+}
+.contact__form__text--file {
+  font-size: 0.6rem;
+}
+.contact__form__error {
+  color: red;
+  position: absolute;
+  font-size: 0.75rem;
+  bottom: -1rem;
+  text-align: center;
+}
+.contact__form__error--message {
+  color: red;
+  position: relative;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.contact__form__error--hidden {
+  display: none;
+}
+.contact__form__button {
+  border: 2px solid black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #01729C;
+  color: white;
+  box-shadow: 0px 2px 2px black;
+}
+.contact__form__button:active {
+  transform: translateY(4%);
+  transform: scale(90%);
+}
+@media (min-width: 65em) {
+  .contact__form__button {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+}
+
+input[type=file] {
+  display: none;
+}
+
+.input--error {
+  border: 2px solid red;
+}/*# sourceMappingURL=Contact.module.css.map */

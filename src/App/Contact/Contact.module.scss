@@ -1,0 +1,292 @@
+@use '../../Styles/abstracts/variables' as *;
+
+
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    
+
+    
+
+    &__border--1 {
+            width: 97%;
+            height: 10px;
+            top: -5px;
+            background: rgb(1, 114, 156);
+            background: linear-gradient(90deg, rgba(1, 114, 156, 1) 9%, rgba(230, 230, 255, 1) 48%, rgba(230, 230, 255, 1) 52%, rgba(1, 114, 156, 1) 97%);
+            position: absolute;
+            border-radius: $sz-025;
+            z-index: -1;
+
+            @media(min-width: $breakpoint) {
+                top: -12px;
+                height: 15px;
+            }
+    
+        }
+
+    
+    
+
+    &__form--wrapper {
+        margin-top: $sz-150;
+        width: min(93%, 650px);
+        border-radius: $sz-025;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        color: black;
+        background-color: $clr-neutral-200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        height: 100%;
+        padding-bottom: $sz-350;
+        position: relative;
+        box-shadow: 3px 50% 2px black;
+        
+
+        @media(min-width: $breakpoint) {
+            margin-top: $sz-200;
+            height: fit-content;
+            padding-bottom: $sz-200;
+        }
+        
+
+        &::before {
+                content: "";
+                position: absolute;
+                z-index: -3;
+                top: -5px;
+        
+                border-radius: $sz-025;
+                width: 104%;
+                height: 101%;
+                background: rgb(1, 114, 156);
+                background: linear-gradient(0deg, rgba(1, 114, 156, 1) 9%, rgba(230, 230, 255, 1) 48%, rgba(230, 230, 255, 1) 52%, rgba(1, 114, 156, 1) 97%);
+                border-bottom-right-radius: 0;
+        
+                border-bottom-left-radius: 0;
+                box-shadow: 5px 2px 5px 0px rgba(0,0,0,0.75), -5px 3px 5px 0px rgba(0,0,0,0.75);
+
+                @media(min-width: $breakpoint) {
+                    top: -12px;
+                    height: 103%;
+                }
+        }
+
+    }
+
+    &__title {
+        margin-top: $sz-200;
+        font-family: $ff-primary;
+        font-size: $fs-175;
+        text-align: center;
+
+        @media(min-width: $breakpoint) {
+            font-size: $fs-125;
+        }
+    }
+
+    &__text {
+        font-family: $ff-secondary;
+        width: 90%;
+        margin-top: $sz-075;
+        text-align: center;
+
+        @media(min-width: $breakpoint) {
+            font-size: $fs-075;
+        }
+    }
+
+    &__form {
+
+        &__input--wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        margin-top: $sz-100;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $sz-075;
+        align-items: center;
+        font-family: $ff-secondary;
+
+        @media(min-width: $breakpoint){
+            gap: $sz-050;
+        }
+
+      
+
+
+
+        &__label{
+            margin-top: $sz-100;
+            font-size: $fs-125;
+            background: rgb(1, 114, 156);
+            background: linear-gradient(90deg, rgba(1, 114, 156, 0) 2%,rgba(1, 114, 156, 0.7) 3%, rgba(230, 230, 255, 1) 28%, rgba(230, 230, 255, 1) 72%, rgba(1, 114, 156, 0.7) 97%, rgba(1, 114, 156, 0) 100%);
+            padding-inline: $sz-250;
+            padding-block: 2px;
+            text-align: center;
+            @media(min-width: $breakpoint) {
+                font-size: $fs-075;
+                margin-top: $sz-075;
+            }
+            
+        }
+
+        &__input {
+            
+            border-radius: $sz-050;
+            background-color: $clr-neutral-400;
+            width: 80%;
+            padding-block: $sz-025;
+            border: 1px solid $clr-neutral-600;
+            font-family: $ff-secondary;
+            
+
+            @media(min-width: $breakpoint) {
+                width: 60%;
+            }
+
+            &:focus, &:active, &:focus-visible {
+                outline: 2px solid black;
+                border: none;
+                background-color: $clr-neutral-400 !important;
+                color: black;
+            }
+            
+            }
+
+           
+
+            
+
+            
+        
+
+        
+
+        &__message {
+            border-radius: $sz-050;
+            background-color: $clr-neutral-400;
+            width: 75%;
+            font-family: $ff-secondary;
+            padding-inline: 2px;
+
+            &:focus {
+                outline: 2px solid black;
+                
+                background-color: $clr-neutral-400;
+                color: black;
+            }
+
+            @media(min-width: $breakpoint) {
+                width: 65%;
+                height: $sz-700;
+            }
+        }
+
+        &__file--wrapper {
+            display: flex;
+            align-items: center;
+            gap: $sz-025;
+            margin-left: $sz-075;
+        }
+
+        &__label--file {
+            // margin-top: $sz-075;
+            border: 2px solid black;
+            padding: $sz-025;
+            font-size: $fs-075;
+            border-radius: $sz-050;
+            background-color: $clr-accent-blue-600;
+            color: white;
+            box-shadow: 0px 2px 2px black;
+
+            @media(min-width: $breakpoint) {
+                font-size: $fs-075;
+                //margin-top: $sz-050;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__text--file {
+            font-size: $fs-060;
+            
+        }
+
+       
+
+        
+
+        &__error {
+            color: red;
+            position: absolute;
+            font-size: $fs-075;
+            bottom: -$sz-100;
+            text-align: center;
+        }
+
+        &__error--message {
+            color: red;
+            position: relative;
+            font-size: $fs-075;
+            
+            text-align: center;
+        }
+
+        &__error--hidden {
+            display: none;
+        }
+
+        
+
+        &__button {
+            border: 2px solid black;
+            padding: $sz-050;
+            
+            border-radius: $sz-050;
+            background-color: $clr-accent-blue-600;
+            color: white;
+            box-shadow: 0px 2px 2px black;
+
+            &:active {
+                 transform: translateY(4%);
+                 transform: scale(90%);
+                
+            }
+
+            @media(min-width: $breakpoint) {
+                font-size: $fs-075;
+                padding: $sz-025;
+            }
+        }
+    }
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+
+ 
+
+.input--error {
+    border: 2px solid red;
+}

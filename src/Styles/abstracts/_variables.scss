@@ -2,9 +2,11 @@
 
 
 $clr-neutral-200: #F9F9F9;
-$clr-neutral-600: #6D6C70;
+$clr-neutral-400: hsl(255, 2%, 83%);
+$clr-neutral-600: hsl(255, 2%, 43%);
 
 $clr-accent-blue-600: #01729C;
+$clr-accent-blue-300: hsl(196, 99%, 51%);
 
 
 
@@ -24,6 +26,7 @@ $fw-bold: 700;
 
 
 $fs-050: 0.5rem;
+$fs-060: 0.6rem;
 $fs-075: 0.75rem;
 $fs-100: 1rem;
 $fs-125: 1.25rem;
@@ -53,6 +56,7 @@ $sz-075: 0.75rem;
 $sz-100: 1rem;
 $sz-125: 1.25rem;
 $sz-150: 1.5rem;
+$sz-160: 1.6rem;
 $sz-175: 1.75rem;
 $sz-200: 2rem;
 $sz-225: 2.25rem;

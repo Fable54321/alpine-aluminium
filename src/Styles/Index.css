@@ -60,7 +60,13 @@ button {
     font-size: 1.5em;
   }
 }
+html input:-webkit-autofill,
+html input:-webkit-autofill:hover,
+html input:-webkit-autofill:focus,
+html input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px hsl(255, 2%, 43%) inset !important;
+}
 
 body {
-  background-color: #6D6C70;
+  background-color: hsl(255, 2%, 43%);
 }/*# sourceMappingURL=Index.css.map */

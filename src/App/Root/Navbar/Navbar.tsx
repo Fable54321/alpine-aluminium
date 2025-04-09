@@ -2,6 +2,7 @@ import styles from './Navbar.module.css'
 import logo from '../../../assets/images/alpine_logo.png'
 import dropdown from '../../../assets/images/dropdown.png'
 import close from '../../../assets/images/close.png'
+import { useLocation } from 'react-router'
 import { useMediaQuery } from 'react-responsive'
 import { MouseEventHandler, useEffect, useState } from 'react'
 import { Link } from 'react-router'
@@ -10,8 +11,28 @@ const Navbar = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 65em)' });
   const [navMenu, setNavMenu] = useState(false);
-  const [killSwitch, setKillSwitch] = useState(false)
+  const [killSwitch, setKillSwitch] = useState(true);
   const [buttonDisplay, setButtonDisplay] = useState('block')
+
+  const location = useLocation();
+  const [usablePath, setUsablePath] = useState('');
+
+  useEffect(() => {
+
+    setNavMenu(false);
+
+    switch (location.pathname) {
+      case '/':
+        setUsablePath('Accueil');
+        break;
+      case '/contact':
+        setUsablePath('Contactez Nous');
+        break;
+      default:
+        setUsablePath('');
+        break;
+    }
+  }, [location]);
 
   useEffect(()=> {
     if(!isMobile){
@@ -38,8 +59,6 @@ if(!navMenu){
          setKillSwitch(true)
        }, 1000)
     }
-   
-  
 };
 
 return (
@@ -83,7 +102,7 @@ return (
         </ul>
       </nav>
       <button
-        style={{ display: navMenu ? "none" : "block" }}
+        style={{ display: !isMobile ? "none" : "block" }}
         onClick={handleClick}
         className={styles["navbar__top__dropdown"]}
       >
@@ -138,7 +157,7 @@ return (
     </div>
     <div className={styles["navbar__bottom"]}>
       <p className={styles["navbar__bottom__number"]}>450-668-6657</p>
-      <h2 className={styles["navbar__bottom__title"]}>Accueil</h2>{" "}
+      <h2 className={styles["navbar__bottom__title"]}>{usablePath}</h2>{" "}
       {/*get location*/}
     </div>
     <div className={styles["navbar__border"]}></div>
