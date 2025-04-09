@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node Server/app.js",
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
