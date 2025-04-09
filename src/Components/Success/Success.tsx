@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './success.module.css'
+import styles from './Success.module.css'
 
 export interface SuccessProps {
   setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
