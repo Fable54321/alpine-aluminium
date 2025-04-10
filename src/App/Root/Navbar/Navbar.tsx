@@ -20,6 +20,7 @@ const Navbar = () => {
   useEffect(() => {
 
     setNavMenu(false);
+    setKillSwitch(true);
 
     switch (location.pathname) {
       case '/':

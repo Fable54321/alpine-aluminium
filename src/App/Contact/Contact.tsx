@@ -1,5 +1,5 @@
 import styles from "./Contact.module.css";
-import Success  from "../../Components/Success/Success";
+import Success from "../../Components/Success/Success";
 
 import { useEffect, useState } from "react";
 
@@ -18,58 +18,51 @@ const Contact = () => {
   const [hasTried, setHasTried] = useState(false);
 
   const handleOnChange = (event: React.FormEvent<HTMLInputElement>) => {
-  const target = event.target as HTMLInputElement;
+    const target = event.target as HTMLInputElement;
 
-  const testFileList = target.files;
-  const fileCount= testFileList ? testFileList.length : 0;
-  let totalFileSize = 0;
+    const testFileList = target.files;
+    const fileCount = testFileList ? testFileList.length : 0;
+    let totalFileSize = 0;
 
-  if(testFileList) {
-    for(const file of testFileList) {
-      totalFileSize += file.size;
+    if (testFileList) {
+      for (const file of testFileList) {
+        totalFileSize += file.size;
+      }
     }
-  }
 
-  if (totalFileSize > 10000000) {
-    alert("Le poids total des fichiers est supérieur à 10Mo");
-    return;
-  }
-
-  else if (fileCount + (fileList?.length ?? 0) > 5) {
-    alert("Le nombre de fichier est supérieur à 5");
-    return;
-  }
-
-  const newFileList = new DataTransfer();
-
- 
-  if (fileList) {
-   
-    
-    for (let i = 0; i < fileList.length; i++) {
-      newFileList.items.add(fileList[i]);
+    if (totalFileSize > 10000000) {
+      alert("Le poids total des fichiers est supérieur à 10Mo");
+      return;
+    } else if (fileCount + (fileList?.length ?? 0) > 5) {
+      alert("Le nombre de fichier est supérieur à 5");
+      return;
     }
-  }
 
- 
-  if (target.files) {
-    for (let i = 0; i < target.files.length; i++) {
-      newFileList.items.add(target.files[i]);
+    const newFileList = new DataTransfer();
+
+    if (fileList) {
+      for (let i = 0; i < fileList.length; i++) {
+        newFileList.items.add(fileList[i]);
+      }
     }
-  }
 
-  
-  setFileList(newFileList.files);
+    if (target.files) {
+      for (let i = 0; i < target.files.length; i++) {
+        newFileList.items.add(target.files[i]);
+      }
+    }
 
-     setFile(target.files?.[0]);
-    
-  }
+    setFileList(newFileList.files);
 
-  useEffect(()=> {
+    setFile(target.files?.[0]);
+  };
 
-    if(!hasTried) {return}
+  useEffect(() => {
+    if (!hasTried || success) {
+      return;
+    }
 
-    if (!nom || !regexName.test(nom))  {
+    if (!nom || !regexName.test(nom)) {
       setNameError(true);
     } else {
       setNameError(false);
@@ -92,82 +85,84 @@ const Contact = () => {
     } else {
       setMessageError(false);
     }
-  },[nom, Numero, courriel, message, hasTried])
+  }, [nom, Numero, courriel, message, hasTried]);
 
-  const regexPhoneNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  const regexPhoneNumber =
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   const regexName = /^[a-zA-ZÀ-ÿ\s]+$/;
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const min20charRegex = /^.{20,}$/;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  setHasTried(!hasTried);
+    setHasTried(!hasTried);
 
-  if (!Numero || !regexPhoneNumber.test(Numero)) {
-    setNumberError(true);
-  }
-
-  if (!nom || !regexName.test(nom)) {
-    setNameError(true);
-  }
-
-  if (!message || !min20charRegex.test(message)) {
-    setMessageError(true);
-  }
-
-  if (!courriel || !emailRegex.test(courriel)) {
-    setEmailError(true);
-  } else {
-    setEmailError(false);
-    setNameError(false);
-    setNumberError(false);
-    setMessageError(false);
-
-    const formData = new FormData();
-
-    formData.append("nom", nom);
-    formData.append("Numero", Numero);
-    formData.append("courriel", courriel);
-    formData.append("message", message);
-    if (fileList) {
-      Array.from(fileList).forEach((file) => {
-        formData.append("attachment", file);
-      });
+    if (!Numero || !regexPhoneNumber.test(Numero)) {
+      setNumberError(true);
     }
 
-     fetch("http://first-server.ca-central-1.elasticbeanstalk.com/send-email", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.text())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
+    if (!nom || !regexName.test(nom)) {
+      setNameError(true);
+    }
 
-    
-    setNumero("");
-    setCourriel("");
-    setMessage("");
-   setFile(undefined);
-    setFileList(undefined);
-    setNameError(false);
-    setNumberError(false);
-    setEmailError(false);
-    setMessageError(false);
-    setSuccess(true);
-    
-  }
-};
+    if (!message || !min20charRegex.test(message)) {
+      setMessageError(true);
+    }
+
+    if (!courriel || !emailRegex.test(courriel)) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
+      setNameError(false);
+      setNumberError(false);
+      setMessageError(false);
+
+      const formData = new FormData();
+
+      formData.append("nom", nom);
+      formData.append("Numero", Numero);
+      formData.append("courriel", courriel);
+      formData.append("message", message);
+      if (fileList) {
+        Array.from(fileList).forEach((file) => {
+          formData.append("attachment", file);
+        });
+      }
+
+      fetch(
+        "http://first-server.ca-central-1.elasticbeanstalk.com/send-email",
+        {
+          method: "POST",
+          body: formData,
+        }
+      )
+        .then((response) => response.text())
+        .then((data) => console.log(data))
+        .catch((error) => console.error(error));
+
+      setNumero("");
+      setCourriel("");
+      setMessage("");
+      setFile(undefined);
+      setFileList(undefined);
+      setNameError(false);
+      setNumberError(false);
+      setEmailError(false);
+      setMessageError(false);
+      setSuccess(true);
+    }
+  };
 
   return (
-    
     <section className={styles["contact"]}>
-      <div style={{display: !success ? "none" : "flex", justifyContent: "center"}}>
-      <Success 
-       setNom ={setNom} 
-       nom= {nom}
-       setSuccess={setSuccess}
-      />
+      <div
+        style={{
+          display: !success ? "none" : "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Success setNom={setNom} nom={nom} setSuccess={setSuccess} />
       </div>
       <div className={styles["contact__form--wrapper"]}>
         <div className={styles["contact__border--1"]}> </div>
@@ -282,11 +277,13 @@ const Contact = () => {
               {" "}
               Joindre une photo{" "}
             </label>
-            <p className={styles["contact__form__text--file"]}>maximum 5 fichiers <br/> maximum 10 Mo</p>
+            <p className={styles["contact__form__text--file"]}>
+              maximum 5 fichiers <br /> maximum 10 Mo
+            </p>
           </div>
-            {fileList && fileList.length > 0 && (
-              <p>{fileList.length} files selected</p>
-            )} 
+          {fileList && fileList.length > 0 && (
+            <p>{fileList.length} files selected</p>
+          )}
           <input
             onChange={handleOnChange}
             className={styles["contact__form__input--file"]}
@@ -311,4 +308,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

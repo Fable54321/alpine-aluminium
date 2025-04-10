@@ -1,5 +1,7 @@
 import styles from './Home.module.css'
 import banner from '../../assets/images/banner.jpg'
+import bannerLow from '../../assets/images/banner--low.jpg'
+import aluminiumLow from '../../assets/images/aluminium-low.jpg'
 import moderne from '../../assets/images/cap--moderne.png'
 import rustique from '../../assets/images/cap--rustique.png'
 import euro from '../../assets/images/cap--euro.png'
@@ -7,15 +9,39 @@ import aluminium from '../../assets/images/aluminium.jpg'
 import jean from '../../assets/images/jean kry.jpg'
 import { useMediaQuery } from 'react-responsive'
 import banner_mobile from '../../assets/images/banner-mobile.jpg'
+import { useState, useEffect } from 'react'
 
 const Home = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 65em)' });
 
+
+  const [isSlow, setIsSlow] = useState(false);
+
+  interface NetworkInformation extends EventTarget {
+    readonly effectiveType?: string;
+    readonly downlink?: number;
+    readonly saveData: boolean;
+    addEventListener(type: string, listener: (this: NetworkInformation, ev: Event) => void): void;
+    removeEventListener(type: string, listener: (this: NetworkInformation, ev: Event) => void): void;
+  }
+  
+ 
+
+  useEffect(() => {
+    const connection = navigator.connection as NetworkInformation | undefined;
+
+    console.log(isSlow);
+
+    if (connection && connection.downlink !== undefined && connection.downlink < 5) {
+      setIsSlow(true);
+    }
+  }, [])
+
   return (
    <section className={styles['home']}>
       <div className={styles['home__banner']}> 
-        <img className={styles['home__banner-img']} src={isMobile ? banner_mobile : banner} alt="banner" />
+        <img className={styles['home__banner-img']} src={isSlow ? bannerLow :  isMobile ? banner_mobile : banner} alt="banner" />
         <h1 className={styles['home__banner__title']}><span>Alpine</span> Aluminium</h1>
         <h2 className={styles['home__banner__subtitle']}>Référence en chapeaux de cheminée</h2>
         <div className={styles['home__banner__border']}><h2>450-668-6657</h2></div>
@@ -38,7 +64,7 @@ const Home = () => {
         <div className={styles['home__aluminium--wrapper']}>
           
           <div className={styles['home__aluminium__part']}>
-            <img className={styles['home__aluminium__part__img']} src={aluminium} alt="une photo de l'équipe en action " />
+            <img className={styles['home__aluminium__part__img']} src={isSlow ? aluminiumLow : aluminium} alt="une photo de l'équipe en action " />
             <p  className={styles['home__aluminium__part__text']}>Notre Expert David En action</p>
           </div>
           <div className={styles['home__aluminium__part']}>
