@@ -15,7 +15,7 @@ Aux chapeaux de cheminée haut de gamme, qui offrent une finition ultra soignée
 
 Chaque produit est conçu pour assurer une protection efficace contre la pluie et la neige tout en favorisant une bonne évacuation des fumées.
 
-Tous nos produits sont <a href='#' download={garantie}>garantis à vie</a>
+Tous nos produits sont <a href={garantie} target='_blank' rel='noopener noreferrer'>garantis à vie</a>
 </p>
     </article>
   )

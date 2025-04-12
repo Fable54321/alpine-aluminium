@@ -10,6 +10,7 @@ import jean from '../../assets/images/jean kry.jpg'
 import { useMediaQuery } from 'react-responsive'
 import banner_mobile from '../../assets/images/banner-mobile.jpg'
 import { useState, useEffect } from 'react'
+import Garantie from '../../Components/Garantie/Garantie'
 
 const Home = () => {
 
@@ -73,6 +74,7 @@ const Home = () => {
           </div>
         </div>
       </article>
+      <Garantie />
       
       
         

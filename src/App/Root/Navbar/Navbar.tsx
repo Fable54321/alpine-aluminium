@@ -83,12 +83,12 @@ return (
           <li>
             <Link 
             className={styles["navbar__nav-desktop__list__link"]} 
-            to="/produits">
+            to="/produits" >
               Nos Produits
             </Link>
           </li>
           <li>
-            <Link className={styles["navbar__nav-desktop__list__link"]} to="">
+            <Link className={styles["navbar__nav-desktop__list__link"]} to="/produits">
               Notre équipe
             </Link>
           </li>
@@ -136,7 +136,7 @@ return (
             </Link>
           </li>
           <li>
-            <Link className={styles["navbar__nav-menu__list__link"]} to="">
+            <Link className={styles["navbar__nav-menu__list__link"]} to="/produits">
               Nos Produits
             </Link>
           </li>
