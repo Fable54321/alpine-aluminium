@@ -29,6 +29,9 @@ const Navbar = () => {
       case '/contact':
         setUsablePath('Contactez Nous');
         break;
+      case '/produits':
+        setUsablePath('Nos Produits');  
+        break;
       default:
         setUsablePath('');
         break;
@@ -78,7 +81,9 @@ return (
             </Link>
           </li>
           <li>
-            <Link className={styles["navbar__nav-desktop__list__link"]} to="">
+            <Link 
+            className={styles["navbar__nav-desktop__list__link"]} 
+            to="/produits">
               Nos Produits
             </Link>
           </li>

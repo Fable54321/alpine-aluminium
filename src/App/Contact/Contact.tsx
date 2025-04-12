@@ -131,7 +131,7 @@ const Contact = () => {
       }
 
       fetch(
-        "http://first-server.ca-central-1.elasticbeanstalk.com/send-email",
+        "https://api.tb-technologies.ca/send-email",
         {
           method: "POST",
           body: formData,

@@ -1,0 +1,39 @@
+@use '../../../Styles/abstracts/variables' as *;
+
+
+
+
+.products__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $clr-neutral-200;
+    color: $clr-neutral-1000;
+    padding-block: $sz-100;
+    width: min(95%,1400px);
+    gap: $sz-050;
+    margin: auto auto;
+    margin-top: $sz-100;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75), 0px -2px 5px 0px rgba(0,0,0,0.75);
+    
+
+    &__title {
+        font-family: $ff-primary;
+        font-size: $fs-200;
+        text-align: center;
+    }
+
+    &__description {
+        font-family: $ff-secondary;
+        text-align: center;
+
+        a {
+            text-decoration: underline;
+            color: $clr-accent-blue-600;
+            font-weight: $fw-bold;
+            cursor: pointer;
+        }
+
+    }
+   
+}

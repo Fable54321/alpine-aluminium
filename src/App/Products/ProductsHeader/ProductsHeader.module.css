@@ -1,0 +1,28 @@
+.products__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F9F9F9;
+  color: hsl(0, 0%, 0%);
+  padding-block: 1rem;
+  width: min(95%, 1400px);
+  gap: 0.5rem;
+  margin: auto auto;
+  margin-top: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75), 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.products__header__title {
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+.products__header__description {
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  text-align: center;
+}
+.products__header__description a {
+  text-decoration: underline;
+  color: #01729C;
+  font-weight: 700;
+  cursor: pointer;
+}/*# sourceMappingURL=ProductsHeader.module.css.map */

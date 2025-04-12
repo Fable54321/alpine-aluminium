@@ -4,8 +4,11 @@
 $clr-neutral-200: #F9F9F9;
 $clr-neutral-400: hsl(255, 2%, 83%);
 $clr-neutral-600: hsl(255, 2%, 43%);
+$clr-neutral-1000: hsl(0, 0%, 0%);
 
 $clr-accent-blue-600: #01729C;
+$clr-accent-blue-400: hsl(196, 99%, 41%);
+
 $clr-accent-blue-300: hsl(196, 99%, 51%);
 
 
@@ -98,4 +101,6 @@ $sz-1000: 10rem;
 
 
 $breakpoint-40: 35em;
+
 $breakpoint: 65em;
+$breakpoint-grid : 87.5em;
