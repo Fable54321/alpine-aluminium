@@ -62,8 +62,8 @@
     font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
   }
   .navbar__nav-desktop__list li {
-    padding: 0.25rem;
     border-bottom: 2px solid #01729C;
+    padding: 0.25rem;
   }
   .navbar__nav-desktop__list li:hover {
     cursor: pointer;
@@ -87,7 +87,7 @@
   background-color: #F9F9F9;
   font-family: "Roboto", "helvetica", "arial", sans-serif;
   font-size: 1.5rem;
-  width: 90%;
+  width: min(90%, 500px);
   height: 75vh;
   border-left: 2px solid black;
   border-bottom: 3px solid black;

@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #F9F9F9;
+  color: hsl(0, 0%, 0%);
+  font-family: "Roboto", "helvetica", "arial", sans-serif;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+.footer h2 > span {
+  font-weight: 700;
+}
+.footer__list {
+  margin-top: 0.75rem;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  list-style: none;
+  font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  font-size: 1rem;
+}
+.footer__social {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.footer__social img {
+  width: 30px;
+}/*# sourceMappingURL=Footer.module.css.map */

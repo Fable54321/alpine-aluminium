@@ -12,8 +12,10 @@ const Products = () => {
   }
 
   return (
+    <>
     <section className={styles["products"]}>
       <ProductsHeader />
+      <div className={styles["products--wrapper--wrapper"]}>
       <div className={styles["products__background"]}>
         
         <div className={styles["products--wrapper"]}>
@@ -28,7 +30,10 @@ const Products = () => {
           ))}
         </div>
       </div>
+      </div>
     </section>
+    
+    </>
   );
 }
 

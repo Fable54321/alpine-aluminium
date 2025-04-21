@@ -7,9 +7,15 @@
     position: relative;
     min-height: 100vh;
     
+    
+        padding-bottom: $sz-100;
+    
+   
+    
 
     &__background {
-        position: absolute;
+        position: relative;
+        
         left: 50%;
         transform: translateX(-50%);
         width: min(90%, 425px);
@@ -18,6 +24,7 @@
         background: linear-gradient(90deg, rgba(1, 114, 156, 1) 9%, rgba(160, 200, 255, 1) 48%, rgba(160, 200, 255, 1) 52%, rgba(1, 114, 156, 1) 97%);
 
         @media(min-width: $breakpoint-40) {
+            padding-top: $sz-050;
             width: 90%;
             background: rgb(1, 114, 156);
             background: linear-gradient(90deg, rgba(1, 114, 156, 1) 9%, rgba(255, 255, 255, 0.9) 48%, rgba(255, 255, 255, 0.9) 52%, rgba(1, 114, 156, 1) 97%);
@@ -44,10 +51,14 @@
         
 
         @media (min-width: $breakpoint-40) {
+            min-height: 100vh;
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             justify-items: center;
             column-gap: $sz-200;
+            padding-bottom: $sz-100;
+           
         }
         
     } /// this is an invisible wrapper that serves the purpose of having cars absolute positioned
@@ -128,13 +139,14 @@
                 font-family: $ff-primary;
                 font-weight: $fw-bold;
                 font-size: $fs-150;
-                text-align: center;
+                text-align: left;
+                width: 92%;
                 
             }
 
             &__description {
                 font-family: $ff-secondary;
-                text-align: center;
+                text-align: left;
                 padding-inline: $sz-100;
                 //width: min(100%, 400px);
             }

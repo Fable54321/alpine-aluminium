@@ -60,13 +60,13 @@ export const chapeaux = [
         id: 6,
         model: "l'urbain leger",
         src: urbainLeger,
-        description: "Chapeau urbain léger en aluminium"
+        description: "L'allure moderne du modèle urbain dans une version allégée"
     },
     {
         id: 7,
         model: "l'urbain",
         src: urbain,
-        description: "Chapeau urbain en aluminium"
+        description: "Alliant discrétion et efficacité, le modèle Urbain s’intègre parfaitement dans les environnements citadins."
     },
     {
         id: 8,
@@ -78,7 +78,7 @@ export const chapeaux = [
         id: 9,
         model: 'le champêtre',
         src: champetre,
-        description: "Chapeau champêtre en aluminium"
+        description: "Avec ses lignes douces et son allure traditionnelle, il s’intègre naturellement dans les paysages ruraux et les habitations au cachet authentique."
     },
     // {
     //     id: 10,
@@ -102,18 +102,18 @@ export const chapeaux = [
         id: 13,
         model: 'le Mont-royal rustique base standard',
         src: montRoyalRustiqueStandard,
-        description: "Chapeau Mont-royal rustique base standard en aluminium"
+        description: "Le chapeau parfait pour les cheminées de maçonnerie sur une base standard."
     },
     {
         id: 14,
         model: 'le Mont-Royal rustique base classique',
         src: montRoyalRustiqueClassique,
-        description: "Chapeau Mont-royal rustique base classique en aluminium"
+        description: "Le chapeau parfait pour les cheminées de maçonnerie sur une base classique."
     },
     {
         id: 15,
         model: 'le Mont-royal rustique base élegant',
         src: montRoyalRustiqueElegant,
-        description: "Chapeau Mont-royal rustique base élegante en aluminium"
+        description: "Le chapeau parfait pour les cheminées de maçonnerie sur une base plus élegante."
     },
 ]

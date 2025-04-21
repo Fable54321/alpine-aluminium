@@ -75,98 +75,70 @@ return (
       />
       <nav className={styles["navbar__nav-desktop"]}>
       <ul className={styles["navbar__nav-desktop__list"]}>
-          <li>
-            <Link className={styles["navbar__nav-desktop__list__link"]} to="/">
-              Accueil
-            </Link>
-          </li>
-          <li>
-            <Link 
-            className={styles["navbar__nav-desktop__list__link"]} 
-            to="/produits" >
-              Nos Produits
-            </Link>
-          </li>
-          <li>
-            <Link className={styles["navbar__nav-desktop__list__link"]} to="/produits">
-              Notre équipe
-            </Link>
-          </li>
-          <li>
-            <Link className={styles["navbar__nav-desktop__list__link"]} to="">
-              Estimation Rapide
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles["navbar__nav-desktop__list__link"]}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <button
-        style={{ display: !isMobile ? "none" : "block" }}
-        onClick={handleClick}
-        className={styles["navbar__top__dropdown"]}
-      >
-        <img src={dropdown} aria-label="menu" />
-      </button>
-    </div>
+  <Link className={styles["navbar__nav-desktop__list__link"]} to="/">
+    <li>Accueil</li>
+  </Link>
+  <Link className={styles["navbar__nav-desktop__list__link"]} to="/produits">
+    <li>Nos Produits</li>
+  </Link>
+  {/* <Link className={styles["navbar__nav-desktop__list__link"]} to="/produits">
+    <li>Notre équipe</li>
+  </Link> */}
+  <Link
+    className={styles["navbar__nav-desktop__list__link"]}
+    to="/contact"
+  >
+    <li>Contact</li>
+  </Link>
+</ul>
+</nav>
+<button
+  style={{ display: !isMobile ? "none" : "block" }}
+  onClick={handleClick}
+  className={styles["navbar__top__dropdown"]}
+>
+  <img src={dropdown} aria-label="menu" />
+</button>
+</div>
 
-    <div style={{ display: killSwitch ? "none" : "block" }}>
-      <nav
-        className={
-          navMenu ? styles["navbar__nav-menu"] : styles["navbar__nav-menu--off"]
-        }
+<div style={{ display: killSwitch ? "none" : "block" }}>
+  <nav
+    className={
+      navMenu ? styles["navbar__nav-menu"] : styles["navbar__nav-menu--off"]
+    }
+  >
+    <button
+      style={{ display: buttonDisplay }}
+      className={styles["navbar__nav-menu__close"]}
+      onClick={handleClick}
+    >
+      <img src={close} aria-label="close" />
+    </button>
+    <ul className={styles["navbar__nav-menu__list"]}>
+      <Link className={styles["navbar__nav-menu__list__link"]} to="/">
+        <li>Accueil</li>
+      </Link>
+      <Link className={styles["navbar__nav-menu__list__link"]} to="/produits">
+        <li>Nos Produits</li>
+      </Link>
+      {/* <Link className={styles["navbar__nav-menu__list__link"]} to="">
+        <li>Notre équipe</li>
+      </Link> */}
+      <Link
+        className={styles["navbar__nav-menu__list__link"]}
+        to="/contact"
       >
-        <button
-          style={{ display: buttonDisplay }}
-          className={styles["navbar__nav-menu__close"]}
-          onClick={handleClick}
-        >
-          <img src={close} aria-label="close" />
-        </button>
-        <ul className={styles["navbar__nav-menu__list"]}>
-          <li>
-            <Link className={styles["navbar__nav-menu__list__link"]} to="/">
-              Accueil
-            </Link>
-          </li>
-          <li>
-            <Link className={styles["navbar__nav-menu__list__link"]} to="/produits">
-              Nos Produits
-            </Link>
-          </li>
-          <li>
-            <Link className={styles["navbar__nav-menu__list__link"]} to="">
-              Notre équipe
-            </Link>
-          </li>
-          <li>
-            <Link className={styles["navbar__nav-menu__list__link"]} to="">
-              Estimation Rapide
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles["navbar__nav-menu__list__link"]}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div className={styles["navbar__bottom"]}>
-      <p className={styles["navbar__bottom__number"]}>450-668-6657</p>
-      <h2 className={styles["navbar__bottom__title"]}>{usablePath}</h2>{" "}
-      {/*get location*/}
-    </div>
-    <div className={styles["navbar__border"]}></div>
+        <li>Contact</li>
+      </Link>
+    </ul>
+  </nav>
+</div>
+<div className={styles["navbar__bottom"]}>
+  <p className={styles["navbar__bottom__number"]}>450-668-6657</p>
+  <h2 className={styles["navbar__bottom__title"]}>{usablePath}</h2>{" "}
+  {/*get location*/}
+</div>
+<div className={styles["navbar__border"]}></div>
   </section>
 );
 }

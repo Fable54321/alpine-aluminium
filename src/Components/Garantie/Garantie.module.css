@@ -43,4 +43,8 @@
     width: 30%;
     box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.75), -5px 3px 5px 0px rgba(0, 0, 0, 0.75);
   }
+}
+
+a {
+  color: hsl(0, 0%, 0%);
 }/*# sourceMappingURL=Garantie.module.css.map */

@@ -1,0 +1,53 @@
+@use '../../Styles/abstracts/variables' as *;
+
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: $clr-neutral-200;
+    color: $clr-neutral-1000;
+    font-family: $ff-primary;
+    font-size: $fs-200;
+    padding-top: $sz-200;
+    padding-bottom: $sz-050;
+
+    h2 > span {
+        font-weight: $fw-bold;
+    }
+    
+
+    &__list {
+        margin-top: $sz-075;
+        column-gap: $sz-075;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+        
+        
+        list-style: none;
+        font-family: $ff-secondary;
+        font-size: $fs-100;
+
+        
+    }
+    
+    
+
+
+    &__social {
+        display: flex;
+        margin-top: $sz-150;
+        justify-content: center;
+        gap: $sz-075;
+       
+
+        img {
+            width: 30px;
+        }
+
+    }
+}

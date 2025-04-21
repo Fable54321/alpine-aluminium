@@ -5,6 +5,8 @@
 
 html {
 
+    height: 100%;
+
     @media(min-width: $breakpoint-40){
         font-size: 1.25em;
     }
@@ -26,5 +28,16 @@ html {
 
 body {
     background-color: $clr-neutral-600;
-   
+   min-height: 100%;
 }
+
+#root {
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+

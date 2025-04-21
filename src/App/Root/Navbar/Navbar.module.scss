@@ -79,10 +79,10 @@
             font-family: $ff-secondary;
 
             li{
-                padding: $sz-025;
+                 
                 //padding-left: $sz-050;
                 border-bottom: 2px solid $clr-accent-blue-600;
-                
+                padding: $sz-025;
 
 
                 &:hover {
@@ -96,6 +96,8 @@
             &__link {
                 color: inherit;
                 text-decoration: none;
+                
+                
             }
         }
     }
@@ -113,7 +115,7 @@
         background-color: $clr-neutral-200;
         font-family: $ff-primary;
         font-size: $fs-150;
-        width: 90%;
+        width: min(90%, 500px);
         height: 75vh;
         border-left: 2px solid black;
         border-bottom: 3px solid black;
@@ -235,3 +237,5 @@
         background: linear-gradient(90deg, rgba(1, 114, 156, 0.4234068627450981) 11%, rgba(1, 114, 156, 1) 51%, rgba(1, 114, 156, 0.42) 89%);
     }
 }
+
+

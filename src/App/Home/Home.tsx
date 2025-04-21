@@ -34,7 +34,7 @@ const Home = () => {
 
     console.log(isSlow);
 
-    if (connection && connection.downlink !== undefined && connection.downlink < 5) {
+    if (connection && connection.downlink !== undefined && connection.downlink < 10) {
       setIsSlow(true);
     }
   }, [])

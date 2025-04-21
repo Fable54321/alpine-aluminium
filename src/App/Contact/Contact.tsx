@@ -118,28 +118,28 @@ const Contact = () => {
       setNumberError(false);
       setMessageError(false);
 
-      const formData = new FormData();
+      // const formData = new FormData();
 
-      formData.append("nom", nom);
-      formData.append("Numero", Numero);
-      formData.append("courriel", courriel);
-      formData.append("message", message);
-      if (fileList) {
-        Array.from(fileList).forEach((file) => {
-          formData.append("attachment", file);
-        });
-      }
+      // formData.append("nom", nom);
+      // formData.append("Numero", Numero);
+      // formData.append("courriel", courriel);
+      // formData.append("message", message);
+      // if (fileList) {
+      //   Array.from(fileList).forEach((file) => {
+      //     formData.append("attachment", file);
+      //   });
+      // }
 
-      fetch(
-        "https://api.tb-technologies.ca/send-email",
-        {
-          method: "POST",
-          body: formData,
-        }
-      )
-        .then((response) => response.text())
-        .then((data) => console.log(data))
-        .catch((error) => console.error(error));
+      // fetch(
+      //   "https://api.tb-technologies.ca/send-email",
+      //   {
+      //     method: "POST",
+      //     body: formData,
+      //   }
+      // )
+      //   .then((response) => response.text())
+      //   .then((data) => console.log(data))
+      //   .catch((error) => console.error(error));
 
       setNumero("");
       setCourriel("");

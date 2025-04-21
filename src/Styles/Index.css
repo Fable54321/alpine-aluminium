@@ -13,10 +13,6 @@ html {
   hanging-punctuation: first last; /* Not supported in Chrome */
 }
 
-body {
-  min-height: 100vh;
-}
-
 /* Media responsive */
 img, picture, svg, video {
   display: block;
@@ -50,6 +46,9 @@ button {
   height: fit-content;
 }
 
+html {
+  height: 100%;
+}
 @media (min-width: 35em) {
   html {
     font-size: 1.25em;
@@ -69,4 +68,10 @@ html input:-webkit-autofill:active {
 
 body {
   background-color: hsl(255, 2%, 43%);
+  min-height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=Index.css.map */

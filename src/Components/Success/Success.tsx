@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import styles from './Success.module.css'
 
 export interface SuccessProps {
@@ -14,19 +14,16 @@ export interface nameProps {
 }
 
 
-const Success: React.FC<SuccessProps & nameProps & setNameprops> = ({ setSuccess, nom, setNom }) => {
+const Success: React.FC<SuccessProps & nameProps & setNameprops> = ({ setSuccess }) => {
 
-  const [name, setName] = useState('');
+ 
 
-  useEffect(()=> {
-    setName(nom);
-    setNom('');
-  },[])
+ 
 
   const handleClick = () => {
-    setNom('');
+    
     setSuccess(false);
-    setName('');
+    
     window.location.reload();
 
   }
@@ -39,8 +36,7 @@ const Success: React.FC<SuccessProps & nameProps & setNameprops> = ({ setSuccess
         
       </h2>
       <div className={styles['success__text--wrapper']}>
-        <p className={styles['success__text']} >Nous vous recontacterons, </p>
-        <p className={styles['success__text--name']} >{name}, </p>
+        <p className={styles['success__text']} >Nous vous recontacterons </p>
         <p className={styles['success__text']} >dans les plus brefs délais</p>
       </div>
         <button onClick={handleClick} className={styles['success__button']}>Fermer</button>

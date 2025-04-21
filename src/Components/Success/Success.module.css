@@ -42,7 +42,7 @@
   width: 104%;
   height: 104%;
   background: rgb(1, 114, 156);
-  background: linear-gradient(0deg, rgb(1, 114, 156) 9%, rgb(230, 230, 255) 48%, rgb(230, 230, 255) 52%, rgb(1, 114, 156) 97%);
+  background: linear-gradient(0deg, rgb(1, 114, 156) 3%, rgb(220, 220, 255) 25%, rgb(1, 114, 156) 50%, rgb(1, 114, 156) 97%);
 }
 .success--wrapper--inner {
   display: flex;
