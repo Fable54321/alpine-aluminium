@@ -74,4 +74,8 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+}
+
+html, body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=Index.css.map */

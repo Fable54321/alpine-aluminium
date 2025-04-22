@@ -114,6 +114,7 @@
 
             @media(min-width: $breakpoint){
                 padding-bottom: $sz-150;
+                
             }
             
             &__title {
@@ -137,6 +138,7 @@
                 @media(min-width: $breakpoint){
                     display: flex;
                     justify-content: space-around;
+                   
                 }
             }
 
@@ -149,6 +151,7 @@
                     margin-top: $sz-150;
                     width: 30%;
                     box-shadow: 5px 2px 5px 0px rgba(0,0,0,0.75), -5px 3px 5px 0px rgba(0,0,0,0.75);
+                    
                 }
             }
 

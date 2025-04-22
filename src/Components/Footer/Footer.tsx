@@ -9,23 +9,23 @@ const Footer = () => {
     <footer className={styles["footer"]}>
       <h2>Alpine <span>Aluminium</span> inc.</h2>
       <ul className={styles["footer__list"]}>
-        <li>
+        <li className={styles["footer__list__item1"]}>
           <Link className={styles["footer__list__link"]} to="/">
             Accueil
           </Link>
         </li>
-        <li>
+        <li className={styles["footer__list__item2"]}>
           <Link className={styles["footer__list__link"]} to="/produits">
             Nos Produits
           </Link>
         </li>
-        <li>
+        {/* <li className={styles["footer__list__item3"]}>
           <Link className={styles["footer__list__link"]} to="/produits">
             Notre équipe
           </Link>
-        </li>
+        </li> */}
 
-        <li>
+        <li className={styles["footer__list__item4"]}>
           <Link className={styles["footer__list__link"]} to="/contact">
             Contact
           </Link>
