@@ -68,11 +68,13 @@ if(!navMenu){
 return (
   <section className={styles.navbar}>
     <div className={styles["navbar__top"]}>
+      <Link to= "/" aria-label='go home'>
       <img
         className={styles["navbar__top__logo"]}
         src={logo}
         alt="le logo de la compagnie"
       />
+      </Link>
       <nav className={styles["navbar__nav-desktop"]}>
       <ul className={styles["navbar__nav-desktop__list"]}>
   <Link className={styles["navbar__nav-desktop__list__link"]} to="/">

@@ -51,17 +51,17 @@
         
 
         @media (min-width: $breakpoint-40) {
-            min-height: 100vh;
+            
             display: grid;
             grid-template-columns: 1fr 1fr;
-
+            margin-top: $sz-050;
             justify-items: center;
             column-gap: $sz-200;
-            padding-bottom: $sz-100;
+            //padding-bottom: $sz-100;
            
         }
         
-    } /// this is an invisible wrapper that serves the purpose of having cars absolute positioned
+    } 
 
     &__card {
         
@@ -79,6 +79,13 @@
             height: 99%;
             justify-content: flex-start;
             width: 105%;
+            margin-top: $sz-100;
+
+            &--15 {
+                grid-template-columns: 1fr;
+                grid-column: 1 / -1;
+                width: 50%;
+            }
             
         }
 
@@ -118,6 +125,8 @@
                 &--7 {
                     margin-top: -1%;
                 }
+
+               
             }
         }
 
@@ -129,9 +138,11 @@
             flex-direction: column;
             align-items: center;
             gap: $sz-075;
+            width: min(100%, 350px);
 
             @media(min-width: $breakpoint-40) {
                 margin-top: $sz-075;
+                width: min(100%, 450px);
             }
             
 

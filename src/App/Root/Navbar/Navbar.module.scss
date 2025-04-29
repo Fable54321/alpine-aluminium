@@ -20,6 +20,25 @@
         padding-left: $sz-200;
         padding-right: $sz-100;
         border-bottom: 1px solid $clr-neutral-600;
+
+
+        &__dropdown {
+           
+            width: min(10%, 50px);
+            -webkit-tap-highlight-color: transparent;
+            position: absolute;
+            right: 10px;
+
+            &:active {
+                transform: scale(90%);
+            }
+
+            
+            @media (min-width: $breakpoint) {
+                display: none;
+            }
+
+            }
         
 
         &__logo {
@@ -29,21 +48,11 @@
 
        
 
-        &__dropdown {
-            display: block;
-            width: min(10%, 45px);
-            object-fit: contain;
-            -webkit-tap-highlight-color: transparent;
+      
 
-            &:active {
-                width: min(9%, 42px);
-                position: relative;
-                transform: translateX(-5%);
-            }
+            
 
-            @media (min-width: $breakpoint) {
-                display: none;
-            }
+            
         }
 
         @keyframes rotateOut {
@@ -55,7 +64,7 @@
             }
         }
 
-    }
+    
 
     &__nav-desktop {
         display: none;
@@ -236,6 +245,7 @@
         background: rgb(1, 114, 156);
         background: linear-gradient(90deg, rgba(1, 114, 156, 0.4234068627450981) 11%, rgba(1, 114, 156, 1) 51%, rgba(1, 114, 156, 0.42) 89%);
     }
+
+
+
 }
-
-

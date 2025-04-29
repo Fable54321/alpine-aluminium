@@ -7,8 +7,8 @@ import rustique  from '../../assets/images/chapeaux/6 Rustique.jpg'
 import urbainLeger  from '../../assets/images/chapeaux/7 Urbain Léger.png'
 import urbain  from '../../assets/images/chapeaux/8 urbain.png'
 import contemporain  from '../../assets/images/chapeaux/9 Contemporain.jpg'
-import champetre from '../../assets/images/chapeaux/Contemporain 2.jpg'
-// import montRoyalEuroStandard from '../../assets/images/chapeaux/'
+import champetre from '../../assets/images/chapeaux/Champêtre 1.jpg'
+import montRoyalEuroStandard from '../../assets/images/chapeaux/Mont-Royale Euro Standard 6.jpg'
 import montRoyalEuroClassique from '../../assets/images/chapeaux/11 Mont-Royal Euro Classique.jpg'
 // import montRoyalEuroElegant from '../../assets/images/chapeaux/'
 import montRoyalRustiqueStandard from '../images/chapeaux/13 Mont-Royal Rustique Standard.png'
@@ -80,17 +80,17 @@ export const chapeaux = [
         src: champetre,
         description: "Avec ses lignes douces et son allure traditionnelle, il s’intègre naturellement dans les paysages ruraux et les habitations au cachet authentique."
     },
-    // {
-    //     id: 10,
-    //     model: 'Mont-royal euro base standard',
-    //     src: 
-    //     description: ""
-    // },
+     {
+        id: 10,
+        model: 'Mont-royal euro base standard',
+        src: montRoyalEuroStandard ,
+        description: "le chapeau parfait pour les cheminées de maçonnerie sur une base standard."
+    },
     {
         id: 11,
         model: 'le Mont-royal euro base classique',
         src: montRoyalEuroClassique,
-        description: "Le chapeau mont-royal a été spécialement pensé pour les cheminées de maçonnerie."
+        description: "Le chapeau parfait pour les cheminées de maçonnerie sur une base classique ."
     },
     // {
     //     id: 12,
@@ -102,7 +102,7 @@ export const chapeaux = [
         id: 13,
         model: 'le Mont-royal rustique base standard',
         src: montRoyalRustiqueStandard,
-        description: "Le chapeau parfait pour les cheminées de maçonnerie sur une base standard."
+        description: "Le chapeau parfait pour les cheminées de maçonnerie dans un style rustique sur une base standard."
     },
     {
         id: 14,
@@ -112,7 +112,7 @@ export const chapeaux = [
     },
     {
         id: 15,
-        model: 'le Mont-royal rustique base élegant',
+        model: 'le Mont-royal rustique base élegante',
         src: montRoyalRustiqueElegant,
         description: "Le chapeau parfait pour les cheminées de maçonnerie sur une base plus élegante."
     },

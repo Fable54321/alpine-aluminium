@@ -42,12 +42,15 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 html {
   height: 100%;
+}
+@media (min-width: 20em) {
+  html {
+    font-size: 1.1em;
+  }
 }
 @media (min-width: 35em) {
   html {

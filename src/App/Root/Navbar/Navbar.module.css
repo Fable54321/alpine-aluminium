@@ -14,27 +14,24 @@
   padding-right: 1rem;
   border-bottom: 1px solid hsl(255, 2%, 43%);
 }
-.navbar__top__logo {
-  width: min(40%, 200px);
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .navbar__top__dropdown {
-  display: block;
-  width: min(10%, 45px);
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: min(10%, 50px);
   -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  right: 10px;
 }
 .navbar__top__dropdown:active {
-  width: min(9%, 42px);
-  position: relative;
-  transform: translateX(-5%);
+  transform: scale(90%);
 }
 @media (min-width: 65em) {
   .navbar__top__dropdown {
     display: none;
   }
+}
+.navbar__top__logo {
+  width: min(40%, 200px);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @keyframes rotateOut {
   0% {

@@ -15,8 +15,18 @@
     padding-top: $sz-200;
     padding-bottom: $sz-050;
 
+    @media(min-width: $breakpoint) {
+        font-size: $fs-150;
+    }
+    
+
+    h2 {
+        text-align: center;
+    }
+
     h2 > span {
         font-weight: $fw-bold;
+
     }
     
 
@@ -50,6 +60,10 @@
             text-align: center;
             margin-left: -$sz-075;
             width: 100%;
+        }
+
+        @media(min-width: $breakpoint){
+            font-size: $fs-075;
         }
     }
     

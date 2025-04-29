@@ -10,6 +10,14 @@
   padding-top: 2rem;
   padding-bottom: 0.5rem;
 }
+@media (min-width: 65em) {
+  .footer {
+    font-size: 1.5rem;
+  }
+}
+.footer h2 {
+  text-align: center;
+}
 .footer h2 > span {
   font-weight: 700;
 }
@@ -40,6 +48,11 @@
   text-align: center;
   margin-left: -0.75rem;
   width: 100%;
+}
+@media (min-width: 65em) {
+  .footer__list {
+    font-size: 0.75rem;
+  }
 }
 .footer__social {
   display: flex;

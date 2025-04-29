@@ -19,6 +19,7 @@
 .products__header__description {
   font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
   text-align: center;
+  width: 96%;
 }
 .products__header__description a {
   text-decoration: underline;
