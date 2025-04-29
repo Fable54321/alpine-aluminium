@@ -155,7 +155,7 @@
             padding-block: $sz-025;
             border: 1px solid $clr-neutral-600;
             font-family: $ff-secondary;
-            
+             padding-left: $sz-050;
 
             @media(min-width: $breakpoint) {
                 width: 60%;
@@ -184,7 +184,8 @@
             background-color: $clr-neutral-400;
             width: 75%;
             font-family: $ff-secondary;
-            padding-inline: 2px;
+            padding-right: 2px;
+            padding-left: $sz-050;
 
             &:focus {
                 outline: 2px solid black;

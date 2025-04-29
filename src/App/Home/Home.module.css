@@ -31,7 +31,7 @@
 }
 @media (min-width: 65em) {
   .home__banner__title {
-    top: 130px;
+    top: 170px;
   }
 }
 .home__banner__subtitle {
@@ -49,7 +49,7 @@
 }
 @media (min-width: 65em) {
   .home__banner__subtitle {
-    top: 180px;
+    top: 220px;
   }
 }
 .home__banner__border--mobile {
@@ -75,7 +75,7 @@
   .home__banner__border {
     position: absolute;
     width: 100%;
-    bottom: 0;
+    top: 2%;
     display: flex;
     justify-content: center;
     font-size: 2.5rem;

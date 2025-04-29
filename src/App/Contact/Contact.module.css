@@ -130,6 +130,7 @@
   padding-block: 0.25rem;
   border: 1px solid hsl(255, 2%, 43%);
   font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
+  padding-left: 0.5rem;
 }
 @media (min-width: 65em) {
   .contact__form__input {
@@ -147,7 +148,8 @@
   background-color: hsl(255, 2%, 83%);
   width: 75%;
   font-family: "Kantumruy Pro", "helvetica", "arial", sans-serif;
-  padding-inline: 2px;
+  padding-right: 2px;
+  padding-left: 0.5rem;
 }
 .contact__form__message:focus {
   outline: 2px solid black;

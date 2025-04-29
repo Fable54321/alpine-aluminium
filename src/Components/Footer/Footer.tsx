@@ -48,7 +48,7 @@ const Footer = () => {
           <img src={gmail} alt="" />
         </a>
         <a
-          href="https://www.linkedin.com/in/jb-concept-inc-v%C3%AAtements-et-objets-promotionnels-3973a4291/"
+          href="https://www.instagram.com/alpine.aluminium//"
           target="_blank"
           rel="noopener noreferrer"
         >

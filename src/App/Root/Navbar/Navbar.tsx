@@ -136,7 +136,7 @@ return (
   </nav>
 </div>
 <div className={styles["navbar__bottom"]}>
-  <p className={styles["navbar__bottom__number"]}>450-668-6657</p>
+  
   <h2 className={styles["navbar__bottom__title"]}>{usablePath}</h2>{" "}
   {/*get location*/}
 </div>

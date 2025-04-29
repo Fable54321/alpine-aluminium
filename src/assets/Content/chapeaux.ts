@@ -34,55 +34,55 @@ export const chapeaux = [
     },
     {
         id: 2,
-        model: "l'élegant",
+        model: "l'Élégant",
         src: elegant,
         description: "Si vous cherchez à ajouter une touche de style et d'élégance à votre cheminée, le chapeau Élégant est un excellent choix."
     },
     {
         id: 3,
-        model: 'le moderne',
+        model: 'le Moderne',
         src: moderne,
         description: "Cette cheminée a été spécialement conçue pour s'adapter aux styles de construction contemporains du 21ème siècle"
     },
     {
         id: 4,
-        model: "l'euro",
+        model: "l'Euro",
         src: euro,
         description: "Le modèle Euro est un véritable hommage à l'Europe traditionnelle, ajoutant une touche de charme à l'ancienne à tous les styles de maison et de revêtements."
     },
     {
         id: 5,
-        model: 'le rustique',
+        model: 'le Rustique',
         src: rustique,
         description: "Le style rustique revient en force ! Et pour retrouver l'apparence authentique d'un toit en tôle pincée d'antan, rien de mieux que le modèle Rustique."
     },
     {
         id: 6,
-        model: "l'urbain leger",
+        model: "l'Urbain léger",
         src: urbainLeger,
         description: "L'allure moderne du modèle urbain dans une version allégée"
     },
     {
         id: 7,
-        model: "l'urbain",
+        model: "l'Urbain",
         src: urbain,
         description: "Alliant discrétion et efficacité, le modèle Urbain s’intègre parfaitement dans les environnements citadins."
     },
     {
         id: 8,
-        model: 'le contemporain',
+        model: 'le Contemporain',
         src: contemporain,
         description: "Le design contemporain de ce modèle s'adapte parfaitement aux maisons d'architecture unique et moderne."
     },
     {
         id: 9,
-        model: 'le champêtre',
+        model: 'le Champêtre',
         src: champetre,
         description: "Avec ses lignes douces et son allure traditionnelle, il s’intègre naturellement dans les paysages ruraux et les habitations au cachet authentique."
     },
      {
         id: 10,
-        model: 'Mont-royal euro base standard',
+        model: 'le Mont-royal euro base standard',
         src: montRoyalEuroStandard ,
         description: "le chapeau parfait pour les cheminées de maçonnerie sur une base standard."
     },
