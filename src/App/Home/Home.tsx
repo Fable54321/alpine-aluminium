@@ -50,7 +50,7 @@ const Home = () => {
         <div className={styles['home__banner__border--mobile']}><h2>450-668-6657</h2></div>
       <article className={styles['home__infiltrations']}>
         <h2 className={styles['home__infiltrations__title']}>Dites adieu aux infiltrations d'eau</h2>
-        <p className={styles['home__infiltrations__text']}>Nos produits de haute qualité sont entièrement conçus par notre équipe. Ils sont sans silicone et donc 100% soudés, prêts pour le climat d'ici. Avec alpine aluminium, les infiltrations d'eau sont choses du passé.</p>
+        <p className={styles['home__infiltrations__text']}>Nos produits de haute qualité sont entièrement conçus par notre équipe. Ils sont sans silicone et donc 100% soudés, prêts pour le climat d'ici. Avec Alpine Aluminium, les infiltrations d'eau sont choses du passé.</p>
         
        <div className={styles['home__infiltrations__img--wrapper']}>
         <img className={styles['home__infiltrations__img']} src={moderne} alt="le chapeau de cheminée moderne est ici présenté" />
