@@ -85,12 +85,13 @@ const Contact = () => {
     } else {
       setMessageError(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nom, Numero, courriel, message, hasTried]);
 
   const regexPhoneNumber =
-    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
   const regexName = /^[a-zA-ZÀ-ÿ\s]+$/;
-  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const emailRegex = /^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/;
   const min20charRegex = /^.{20,}$/;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -131,7 +132,7 @@ const Contact = () => {
       }
 
       fetch(
-        "https://api.tb-technologies.ca/send-email",
+        "https://backend-alpine.tb-technologies.ca/send-email",
         {
           method: "POST",
           body: formData,
